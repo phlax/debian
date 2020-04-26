@@ -1,0 +1,7 @@
+Origin: phlax.github.io/debian
+Label: phlax.github.io/debian
+Codename: buster
+Architectures: amd64
+Components: main
+Description: Personal repository
+SignWith: CEEDA63F
