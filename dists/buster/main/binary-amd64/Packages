@@ -37,6 +37,24 @@ MD5sum: 6edb01025190bf9312ce5ee1c2d1c713
 Description: debug symbols for criu
 Build-Ids: 314dc4b42a5b2d98a50202ccb0e2f37ec1f631b6 78322ef4b148f8e838e3fc7480c646e0e275e4ad 959f883236046769dd85dfd0b5ab4a8228c6a368 dcce4a06dca4d308203a59d6e412fb2d49221a72
 
+Package: docker-triggers
+Version: 0.0.1
+Architecture: all
+Maintainer: "Ryan Northey" <ryan@synca.io>
+Installed-Size: 25
+Depends: jq, docker-ce-cli
+Homepage: https://github.com/phlax/l10n.cloud/frontend
+Priority: optional
+Section: devel
+Filename: pool/main/d/docker-triggers/docker-triggers_0.0.1_all.deb
+Size: 3212
+SHA256: 9f67ef8d8e02478ea4e37bccfafe46cd8e5683dd88f9001f97e46954e04366f4
+SHA1: dc41439e6eac3f89d2043e965cc7c700e51c793a
+MD5sum: 422e09335c6ae34fb49969f2e8af9789
+Description: Docker triggers
+ Listen to Docker events and trigger scripts when
+ given pattern match the event.
+
 Package: gnutls-bin
 Source: gnutls28
 Version: 3.6.13-2~bpo10+1
