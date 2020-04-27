@@ -1,3 +1,997 @@
+Package: criu
+Version: 3.13-6~bpo10+1
+Architecture: amd64
+Maintainer: Salvatore Bonaccorso <carnil@debian.org>
+Installed-Size: 2690
+Depends: python3-protobuf, python3:any, libbsd0 (>= 0.6.0), libc6 (>= 2.28), libgnutls30 (>= 3.6.12), libnet1 (>= 1.1.2.1), libnl-3-200 (>= 3.2.7), libprotobuf-c1 (>= 1.0.1)
+Recommends: iproute2 | iproute
+Homepage: https://www.criu.org/
+Priority: optional
+Section: admin
+Filename: pool/main/c/criu/criu_3.13-6~bpo10+1_amd64.deb
+Size: 605992
+SHA256: 1fa71f7f39ae6d6228ffb156b69dfdbc6b8a16698fa88b71e3a2bf9e6cd6b1bc
+SHA1: c06a3ef0c866df852d3df6fdfc1b3323aec20c12
+MD5sum: d3435fda5b0b93bfd208159f40295973
+Description: checkpoint and restore in userspace
+ criu contains the utilities to checkpoint and restore processes in
+ userspace.
+
+Package: criu-dbgsym
+Source: criu
+Version: 3.13-6~bpo10+1
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Salvatore Bonaccorso <carnil@debian.org>
+Installed-Size: 1496
+Depends: criu (= 3.13-6~bpo10+1)
+Breaks: criu-dbg (<< 1.8-2~)
+Replaces: criu-dbg (<< 1.8-2~)
+Priority: optional
+Section: debug
+Filename: pool/main/c/criu/criu-dbgsym_3.13-6~bpo10+1_amd64.deb
+Size: 1290456
+SHA256: e098e1a07fe783b1621ac1d047c00014c3f07744b7059a73b5222de8e028391c
+SHA1: dd0d6f4cce12408a81b891e4bd05a873be414c1b
+MD5sum: 6edb01025190bf9312ce5ee1c2d1c713
+Description: debug symbols for criu
+Build-Ids: 314dc4b42a5b2d98a50202ccb0e2f37ec1f631b6 78322ef4b148f8e838e3fc7480c646e0e275e4ad 959f883236046769dd85dfd0b5ab4a8228c6a368 dcce4a06dca4d308203a59d6e412fb2d49221a72
+
+Package: gnutls-bin
+Source: gnutls28
+Version: 3.6.13-2~bpo10+1
+Architecture: amd64
+Maintainer: Debian GnuTLS Maintainers <pkg-gnutls-maint@lists.alioth.debian.org>
+Installed-Size: 1676
+Depends: libc6 (>= 2.17), libgmp10 (>= 2:6), libgnutls-dane0 (>= 3.5.6), libgnutls30 (>= 3.6.13-0+private+1), libhogweed5, libidn2-0 (>= 0.6), libnettle7, libopts25 (>= 1:5.18.16), libp11-kit0 (>= 0.23.18.1), libtasn1-6 (>= 4.14), libunistring2 (>= 0.9.7)
+Multi-Arch: foreign
+Homepage: https://www.gnutls.org/
+Priority: optional
+Section: net
+Filename: pool/main/g/gnutls28/gnutls-bin_3.6.13-2~bpo10+1_amd64.deb
+Size: 608104
+SHA256: a0e7e6373733979470218b95ee8368aa76a9f352aba023137e1ea23be289bd69
+SHA1: e7cac3f093abec9ce7f1d99ab0f8776d8d2b21c3
+MD5sum: 008cb56cb2c550d4094a8bb971b908c7
+Description: GNU TLS library - commandline utilities
+ GnuTLS is a portable library which implements the Transport Layer
+ Security (TLS 1.0, 1.1, 1.2, 1.3) and Datagram
+ Transport Layer Security (DTLS 1.0, 1.2) protocols.
+ .
+ GnuTLS features support for:
+  - certificate path validation, as well as DANE and trust on first use.
+  - the Online Certificate Status Protocol (OCSP).
+  - public key methods, including RSA and Elliptic curves, as well as password
+    and key authentication methods such as SRP and PSK protocols.
+  - all the strong encryption algorithms, including AES and Camellia.
+  - CPU-assisted cryptography with VIA padlock and AES-NI instruction sets.
+  - HSMs and cryptographic tokens, via PKCS #11.
+ .
+ This package contains a commandline interface to the GNU TLS library, which
+ can be used to set up secure connections from e.g. shell scripts, debugging
+ connection issues or managing certificates.
+ .
+ Useful utilities include:
+  - TLS termination: gnutls-cli, gnutls-serv
+  - key and certificate management: certtool, ocsptool, p11tool
+  - credential management: srptool, psktool
+
+Package: gnutls-bin-dbgsym
+Source: gnutls28
+Version: 3.6.13-2~bpo10+1
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Debian GnuTLS Maintainers <pkg-gnutls-maint@lists.alioth.debian.org>
+Installed-Size: 1045
+Depends: gnutls-bin (= 3.6.13-2~bpo10+1)
+Priority: optional
+Section: debug
+Filename: pool/main/g/gnutls28/gnutls-bin-dbgsym_3.6.13-2~bpo10+1_amd64.deb
+Size: 838296
+SHA256: 0017d68f2bdf7c90889d92eb1f784c9d9d0f53fa3857c82abd1bc2c1d8e52191
+SHA1: 036bfcc406377310815d1f6a8d9f53b3420e7ad7
+MD5sum: 3abc148b399d82ab1570de25ceff3286
+Description: debug symbols for gnutls-bin
+Build-Ids: 2513f5e823cc3c26393268fe39e1f82ca4262151 488bd4fdab9f9c970906101bc367c8096c3d87b6 6eac05a15fcf5139678f3c8a78d6c32a8ed785d5 76a9e2f876d84747e6eee37a6d28565a1063f5bc 9cf8ccabe161d32f0fc7519b761399c0a009033a bb52dea593701f663f92e16a0e2c38a3c0cc20f4 bfe50a571397fb8b40a51d8d12b7175884dabfe6 ccc8c1daaa72a56d0cd7939f2bf3298f874cd188 e442d51b0d8b1e7f6de7597a83621b60980d0a4d
+
+Package: gnutls-doc
+Source: gnutls28
+Version: 3.6.13-2~bpo10+1
+Architecture: all
+Maintainer: Debian GnuTLS Maintainers <pkg-gnutls-maint@lists.alioth.debian.org>
+Installed-Size: 7651
+Multi-Arch: foreign
+Homepage: https://www.gnutls.org/
+Priority: optional
+Section: doc
+Filename: pool/main/g/gnutls28/gnutls-doc_3.6.13-2~bpo10+1_all.deb
+Size: 4491728
+SHA256: 6e9da776ae1d9af0d50a296609064e8686d800f5edc67ff4f80f52e972aebb3b
+SHA1: e49655bcb81788d203cc46833ce08374e64f439e
+MD5sum: b612d4529aaacfd560b27312d0c51b2b
+Description: GNU TLS library - documentation and examples
+ GnuTLS is a portable library which implements the Transport Layer
+ Security (TLS 1.0, 1.1, 1.2, 1.3) and Datagram
+ Transport Layer Security (DTLS 1.0, 1.2) protocols.
+ .
+ GnuTLS features support for:
+  - certificate path validation, as well as DANE and trust on first use.
+  - the Online Certificate Status Protocol (OCSP).
+  - public key methods, including RSA and Elliptic curves, as well as password
+    and key authentication methods such as SRP and PSK protocols.
+  - all the strong encryption algorithms, including AES and Camellia.
+  - CPU-assisted cryptography with VIA padlock and AES-NI instruction sets.
+  - HSMs and cryptographic tokens, via PKCS #11.
+ .
+ This package contains all the GnuTLS documentation.
+
+Package: guile-gnutls
+Source: gnutls28
+Version: 3.6.13-2~bpo10+1
+Architecture: amd64
+Maintainer: Debian GnuTLS Maintainers <pkg-gnutls-maint@lists.alioth.debian.org>
+Installed-Size: 878
+Depends: guile-2.2-libs, libc6 (>= 2.14), libgc1c2 (>= 1:7.2d), libgnutls30 (>= 3.6.12), guile-2.2
+Homepage: https://www.gnutls.org/
+Priority: optional
+Section: lisp
+Filename: pool/main/g/gnutls28/guile-gnutls_3.6.13-2~bpo10+1_amd64.deb
+Size: 415268
+SHA256: 5cd5c070deaec5421aea9415232ca6e30274cdd9587a6748a4fe7fe15e786b7a
+SHA1: 248c02a5ba6a1d01b6d70f14761bc4ea4a0d11aa
+MD5sum: f7d6fe5507c226da3333e6aea674ee2e
+Description: GNU TLS library - GNU Guile bindings
+ GnuTLS is a portable library which implements the Transport Layer
+ Security (TLS 1.0, 1.1, 1.2, 1.3) and Datagram
+ Transport Layer Security (DTLS 1.0, 1.2) protocols.
+ .
+ GnuTLS features support for:
+  - certificate path validation, as well as DANE and trust on first use.
+  - the Online Certificate Status Protocol (OCSP).
+  - public key methods, including RSA and Elliptic curves, as well as password
+    and key authentication methods such as SRP and PSK protocols.
+  - all the strong encryption algorithms, including AES and Camellia.
+  - CPU-assisted cryptography with VIA padlock and AES-NI instruction sets.
+  - HSMs and cryptographic tokens, via PKCS #11.
+ .
+ This package contains the GNU Guile modules.
+
+Package: guile-gnutls-dbgsym
+Source: gnutls28
+Version: 3.6.13-2~bpo10+1
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Debian GnuTLS Maintainers <pkg-gnutls-maint@lists.alioth.debian.org>
+Installed-Size: 287
+Depends: guile-gnutls (= 3.6.13-2~bpo10+1)
+Priority: optional
+Section: debug
+Filename: pool/main/g/gnutls28/guile-gnutls-dbgsym_3.6.13-2~bpo10+1_amd64.deb
+Size: 237272
+SHA256: 2ae9dc2b15d2506aac8a3901697c74135a65cab44b8b9ebec37640abd0b013b2
+SHA1: 0a7bf92ffe67731fb05728f2f4ca392061d47ac4
+MD5sum: 682e2b95a95549a2a321e5092149e776
+Description: debug symbols for guile-gnutls
+Build-Ids: 68383dc9c084d9f9016bb72edbfd908af300a116
+
+Package: libffi-dev
+Source: libffi
+Version: 3.3-4~bpo10+1
+Architecture: amd64
+Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Installed-Size: 312
+Depends: libffi7 (= 3.3-4~bpo10+1)
+Conflicts: libffi4-dev
+Multi-Arch: same
+Homepage: https://sourceware.org/libffi/
+Priority: optional
+Section: libdevel
+Filename: pool/main/libf/libffi/libffi-dev_3.3-4~bpo10+1_amd64.deb
+Size: 56744
+SHA256: a793d872453101e7c4e0f7af9d626c9ca2defa333fcc75d09d00916318021386
+SHA1: 08f5b2181ed1f02b48608ed1e2ab467e4d87da11
+MD5sum: 76c949f78307b5eb202bafda40ef182c
+Description: Foreign Function Interface library (development files)
+ This package contains the headers and static library files necessary for
+ building programs which use libffi.
+ .
+ A foreign function interface is the popular name for the interface that
+ allows code written in one language to call code written in another
+ language.
+
+Package: libffi7
+Source: libffi
+Version: 3.3-4~bpo10+1
+Architecture: amd64
+Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Installed-Size: 65
+Depends: libc6 (>= 2.14)
+Multi-Arch: same
+Homepage: https://sourceware.org/libffi/
+Priority: optional
+Section: libs
+Filename: pool/main/libf/libffi/libffi7_3.3-4~bpo10+1_amd64.deb
+Size: 23132
+SHA256: d098cc0b2efcb52f01a30ce7126d5fd85689fb5f3c961f165a0f34fab8036bbe
+SHA1: 3e8e3ebb1fdca008ec2fac1372c5e182e0111c28
+MD5sum: 357fd4f81fe97b37cf1ba46e21a41e63
+Description: Foreign Function Interface library runtime
+ A foreign function interface is the popular name for the interface that
+ allows code written in one language to call code written in another
+ language.
+
+Package: libffi7-dbgsym
+Source: libffi
+Version: 3.3-4~bpo10+1
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Installed-Size: 69
+Depends: libffi7 (= 3.3-4~bpo10+1)
+Multi-Arch: same
+Priority: optional
+Section: debug
+Filename: pool/main/libf/libffi/libffi7-dbgsym_3.3-4~bpo10+1_amd64.deb
+Size: 52648
+SHA256: 7fc73af131e0e65db5ea88fd46e20b83972aadc3324b52f20a93e61090d2b7db
+SHA1: 9e7f31da295fbab2044f35e453405ed488326215
+MD5sum: 0471f3acb4d4913e4581df6a3a658a66
+Description: debug symbols for libffi7
+Build-Ids: af8640490dddf69d2142235beee48a54c4c27e52
+
+Package: libgnutls-dane0
+Source: gnutls28
+Version: 3.6.13-2~bpo10+1
+Architecture: amd64
+Maintainer: Debian GnuTLS Maintainers <pkg-gnutls-maint@lists.alioth.debian.org>
+Installed-Size: 428
+Depends: libgnutls30 (= 3.6.13-2~bpo10+1), libc6 (>= 2.14), libunbound8 (>= 1.8.0)
+Suggests: dns-root-data
+Multi-Arch: same
+Homepage: https://www.gnutls.org/
+Priority: optional
+Section: libs
+Filename: pool/main/g/gnutls28/libgnutls-dane0_3.6.13-2~bpo10+1_amd64.deb
+Size: 361716
+SHA256: 5a0710df5f00d5102657d197856c01b87a0b072947c69f74877783c7e5424e9d
+SHA1: ed2a51692a997ff775bac6d9f728507f574eae7c
+MD5sum: 3f86ea9370ad4eb5f65d947717d486d4
+Description: GNU TLS library - DANE security support
+ GnuTLS is a portable library which implements the Transport Layer
+ Security (TLS 1.0, 1.1, 1.2, 1.3) and Datagram
+ Transport Layer Security (DTLS 1.0, 1.2) protocols.
+ .
+ GnuTLS features support for:
+  - certificate path validation, as well as DANE and trust on first use.
+  - the Online Certificate Status Protocol (OCSP).
+  - public key methods, including RSA and Elliptic curves, as well as password
+    and key authentication methods such as SRP and PSK protocols.
+  - all the strong encryption algorithms, including AES and Camellia.
+  - CPU-assisted cryptography with VIA padlock and AES-NI instruction sets.
+  - HSMs and cryptographic tokens, via PKCS #11.
+ .
+ This package contains the runtime library for DANE (DNS-based Authentication
+ of Named Entities) support.
+
+Package: libgnutls-dane0-dbgsym
+Source: gnutls28
+Version: 3.6.13-2~bpo10+1
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Debian GnuTLS Maintainers <pkg-gnutls-maint@lists.alioth.debian.org>
+Installed-Size: 79
+Depends: libgnutls-dane0 (= 3.6.13-2~bpo10+1)
+Multi-Arch: same
+Priority: optional
+Section: debug
+Filename: pool/main/g/gnutls28/libgnutls-dane0-dbgsym_3.6.13-2~bpo10+1_amd64.deb
+Size: 62520
+SHA256: 85191a4dbcf94c1d8ecf883980ed36e44ac8867b157d6e70b9fedd721cab02c1
+SHA1: e2b2ee74d5540771845c98de1fb13b4dcb330eb0
+MD5sum: 295017425901adda9d33c5767917eef1
+Description: debug symbols for libgnutls-dane0
+Build-Ids: ea4b42a6fb25b2d10d2f8d2281b80390f7dcd7b6
+
+Package: libgnutls-openssl27
+Source: gnutls28
+Version: 3.6.13-2~bpo10+1
+Architecture: amd64
+Maintainer: Debian GnuTLS Maintainers <pkg-gnutls-maint@lists.alioth.debian.org>
+Installed-Size: 439
+Depends: libgnutls30 (= 3.6.13-2~bpo10+1), libc6 (>= 2.14)
+Multi-Arch: same
+Homepage: https://www.gnutls.org/
+Priority: optional
+Section: libs
+Filename: pool/main/g/gnutls28/libgnutls-openssl27_3.6.13-2~bpo10+1_amd64.deb
+Size: 362440
+SHA256: 07dd7106365755466bf1fefebba284eb75d13c7bbc0de83fad85b2a180519004
+SHA1: cf4052e93bea76be691f2040a777501bdddc8df5
+MD5sum: b7a3fb114b3c899f47a61bb72e743d9f
+Description: GNU TLS library - OpenSSL wrapper
+ GnuTLS is a portable library which implements the Transport Layer
+ Security (TLS 1.0, 1.1, 1.2, 1.3) and Datagram
+ Transport Layer Security (DTLS 1.0, 1.2) protocols.
+ .
+ GnuTLS features support for:
+  - certificate path validation, as well as DANE and trust on first use.
+  - the Online Certificate Status Protocol (OCSP).
+  - public key methods, including RSA and Elliptic curves, as well as password
+    and key authentication methods such as SRP and PSK protocols.
+  - all the strong encryption algorithms, including AES and Camellia.
+  - CPU-assisted cryptography with VIA padlock and AES-NI instruction sets.
+  - HSMs and cryptographic tokens, via PKCS #11.
+ .
+ This package contains the runtime library of the GnuTLS OpenSSL wrapper.
+
+Package: libgnutls-openssl27-dbgsym
+Source: gnutls28
+Version: 3.6.13-2~bpo10+1
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Debian GnuTLS Maintainers <pkg-gnutls-maint@lists.alioth.debian.org>
+Installed-Size: 82
+Depends: libgnutls-openssl27 (= 3.6.13-2~bpo10+1)
+Multi-Arch: same
+Priority: optional
+Section: debug
+Filename: pool/main/g/gnutls28/libgnutls-openssl27-dbgsym_3.6.13-2~bpo10+1_amd64.deb
+Size: 63656
+SHA256: be1d842db05f6c0787887355e8de8ab94c10dbbbd525c7f1b22176d441cf02be
+SHA1: 3fec469e01f95300f73f61f49100e291d2832a38
+MD5sum: 5f0dd564ddb1179276d3236480328ab1
+Description: debug symbols for libgnutls-openssl27
+Build-Ids: e1262d4dfcca35128d79f47bfae7b9c7c0943e76
+
+Package: libgnutls28-dev
+Source: gnutls28
+Version: 3.6.13-2~bpo10+1
+Architecture: amd64
+Maintainer: Debian GnuTLS Maintainers <pkg-gnutls-maint@lists.alioth.debian.org>
+Installed-Size: 4742
+Depends: libc6-dev | libc-dev, libgnutls-dane0 (= 3.6.13-2~bpo10+1), libgnutls-openssl27 (= 3.6.13-2~bpo10+1), libgnutls30 (= 3.6.13-2~bpo10+1), libgnutlsxx28 (= 3.6.13-2~bpo10+1), libidn2-dev, libp11-kit-dev (>= 0.23.10), libtasn1-6-dev, nettle-dev (>= 3.4.1~rc1)
+Suggests: gnutls-bin, gnutls-doc
+Conflicts: gnutls-dev
+Replaces: gnutls-dev
+Provides: gnutls-dev, libgnutls-openssl-dev
+Multi-Arch: same
+Homepage: https://www.gnutls.org/
+Priority: optional
+Section: libdevel
+Filename: pool/main/g/gnutls28/libgnutls28-dev_3.6.13-2~bpo10+1_amd64.deb
+Size: 1202860
+SHA256: b040a6707cd70cdd793595783ec3c046dfc226fa7efbf13bd787dd71c1ae6f1b
+SHA1: ced1b6000623adea5c0234a232e5b1fb44685a8f
+MD5sum: caf9367531b8ca7701d7d102cc38c0c9
+Description: GNU TLS library - development files
+ GnuTLS is a portable library which implements the Transport Layer
+ Security (TLS 1.0, 1.1, 1.2, 1.3) and Datagram
+ Transport Layer Security (DTLS 1.0, 1.2) protocols.
+ .
+ GnuTLS features support for:
+  - certificate path validation, as well as DANE and trust on first use.
+  - the Online Certificate Status Protocol (OCSP).
+  - public key methods, including RSA and Elliptic curves, as well as password
+    and key authentication methods such as SRP and PSK protocols.
+  - all the strong encryption algorithms, including AES and Camellia.
+  - CPU-assisted cryptography with VIA padlock and AES-NI instruction sets.
+  - HSMs and cryptographic tokens, via PKCS #11.
+ .
+ This package contains the GnuTLS development files.
+
+Package: libgnutls30
+Source: gnutls28
+Version: 3.6.13-2~bpo10+1
+Architecture: amd64
+Maintainer: Debian GnuTLS Maintainers <pkg-gnutls-maint@lists.alioth.debian.org>
+Installed-Size: 2935
+Depends: libgmp10 (>= 2:6.0.0), libc6 (>= 2.25), libhogweed5, libidn2-0 (>= 2.0.0), libnettle7, libp11-kit0 (>= 0.23.18.1), libtasn1-6 (>= 4.14), libunistring2 (>= 0.9.7)
+Suggests: gnutls-bin
+Multi-Arch: same
+Homepage: https://www.gnutls.org/
+Priority: optional
+Section: libs
+Filename: pool/main/g/gnutls28/libgnutls30_3.6.13-2~bpo10+1_amd64.deb
+Size: 1230416
+SHA256: 02f5b4299f77d6628a0dc06e9b7b0690c4cb8259fd0636834a78c54908b9839b
+SHA1: a688bebe1dc710564fea271b9fe78a3b44292cbf
+MD5sum: 7a72c817689a80425e6a2ad28ab9ea00
+Description: GNU TLS library - main runtime library
+ GnuTLS is a portable library which implements the Transport Layer
+ Security (TLS 1.0, 1.1, 1.2, 1.3) and Datagram
+ Transport Layer Security (DTLS 1.0, 1.2) protocols.
+ .
+ GnuTLS features support for:
+  - certificate path validation, as well as DANE and trust on first use.
+  - the Online Certificate Status Protocol (OCSP).
+  - public key methods, including RSA and Elliptic curves, as well as password
+    and key authentication methods such as SRP and PSK protocols.
+  - all the strong encryption algorithms, including AES and Camellia.
+  - CPU-assisted cryptography with VIA padlock and AES-NI instruction sets.
+  - HSMs and cryptographic tokens, via PKCS #11.
+ .
+ This package contains the main runtime library.
+
+Package: libgnutls30-dbgsym
+Source: gnutls28
+Version: 3.6.13-2~bpo10+1
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Debian GnuTLS Maintainers <pkg-gnutls-maint@lists.alioth.debian.org>
+Installed-Size: 2160
+Depends: libgnutls30 (= 3.6.13-2~bpo10+1)
+Multi-Arch: same
+Priority: optional
+Section: debug
+Filename: pool/main/g/gnutls28/libgnutls30-dbgsym_3.6.13-2~bpo10+1_amd64.deb
+Size: 1975292
+SHA256: 758af18daca1f523d0537788b36f3cc20cd0b4303fff8de423af00cece8d5333
+SHA1: 5bdb6f015faf2e83fbe517bc6306ecc23c0002a0
+MD5sum: 85f7d9e9bb879774644681fb95f74dd2
+Description: debug symbols for libgnutls30
+Build-Ids: c4ab366fab053c14db43f85d67b8559a398a9b8a
+
+Package: libgnutlsxx28
+Source: gnutls28
+Version: 3.6.13-2~bpo10+1
+Architecture: amd64
+Maintainer: Debian GnuTLS Maintainers <pkg-gnutls-maint@lists.alioth.debian.org>
+Installed-Size: 82
+Depends: libgnutls30 (= 3.6.13-2~bpo10+1), libc6 (>= 2.14), libgcc-s1 (>= 3.0), libstdc++6 (>= 5)
+Multi-Arch: same
+Homepage: https://www.gnutls.org/
+Priority: optional
+Section: libs
+Filename: pool/main/g/gnutls28/libgnutlsxx28_3.6.13-2~bpo10+1_amd64.deb
+Size: 14588
+SHA256: bfc1ccb005d565f18bbad778cd7239bcea615eb3c0395047e385ca9f83070a08
+SHA1: 4b293f13bf34d02bf9be3e77214e4c9573a24a65
+MD5sum: 972b43a946ace39737b63d8e3ff232bc
+Description: GNU TLS library - C++ runtime library
+ GnuTLS is a portable library which implements the Transport Layer
+ Security (TLS 1.0, 1.1, 1.2, 1.3) and Datagram
+ Transport Layer Security (DTLS 1.0, 1.2) protocols.
+ .
+ GnuTLS features support for:
+  - certificate path validation, as well as DANE and trust on first use.
+  - the Online Certificate Status Protocol (OCSP).
+  - public key methods, including RSA and Elliptic curves, as well as password
+    and key authentication methods such as SRP and PSK protocols.
+  - all the strong encryption algorithms, including AES and Camellia.
+  - CPU-assisted cryptography with VIA padlock and AES-NI instruction sets.
+  - HSMs and cryptographic tokens, via PKCS #11.
+ .
+ This package contains the C++ runtime libraries.
+
+Package: libgnutlsxx28-dbgsym
+Source: gnutls28
+Version: 3.6.13-2~bpo10+1
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Debian GnuTLS Maintainers <pkg-gnutls-maint@lists.alioth.debian.org>
+Installed-Size: 90
+Depends: libgnutlsxx28 (= 3.6.13-2~bpo10+1)
+Multi-Arch: same
+Priority: optional
+Section: debug
+Filename: pool/main/g/gnutls28/libgnutlsxx28-dbgsym_3.6.13-2~bpo10+1_amd64.deb
+Size: 53440
+SHA256: 7b6eb2fa5d960130dc0c1cb912686194de6c18a52d97ab8a7a50715010327771
+SHA1: 120bd46ddf3d9a202cb06fe7de0e197d7991cfcc
+MD5sum: 060e10184b24435e1f63d177668330b7
+Description: debug symbols for libgnutlsxx28
+Build-Ids: d146359243a9eb4a4120b401aff51070d9290d47
+
+Package: libhogweed5
+Source: nettle
+Version: 3.5.1+really3.5.1-2~bpo10+1
+Architecture: amd64
+Maintainer: Magnus Holmgren <holmgren@debian.org>
+Installed-Size: 242
+Depends: libc6 (>= 2.14), libgmp10 (>= 2:6.0.0), libnettle7 (= 3.5.1+really3.5.1-2~bpo10+1)
+Multi-Arch: same
+Homepage: http://www.lysator.liu.se/~nisse/nettle/
+Priority: optional
+Section: libs
+Filename: pool/main/n/nettle/libhogweed5_3.5.1+really3.5.1-2~bpo10+1_amd64.deb
+Size: 138004
+SHA256: 765e27d7cb1f5df7a94d028d1361abe07206008a6c6e77fdaf64bc5c45a50258
+SHA1: 337f046ef3e1122e911fb587a9af821916f12bcc
+MD5sum: c6c2bb250f9dc147f9b0b6348d2286d0
+Description: low level cryptographic library (public-key cryptos)
+ Nettle is a cryptographic library that is designed to fit easily in more or
+ less any context: In crypto toolkits for object-oriented languages (C++,
+ Python, Pike, ...), in applications like LSH or GNUPG, or even in kernel
+ space.
+ .
+ It tries to solve a problem of providing a common set of cryptographic
+ algorithms for higher-level applications by implementing a
+ context-independent set of cryptographic algorithms. In that light, Nettle
+ doesn't do any memory allocation or I/O, it simply provides the
+ cryptographic algorithms for the application to use in any environment and
+ in any way it needs.
+ .
+ This package contains the asymmetric cryptographic algorithms, which,
+ require the GNU multiple precision arithmetic library (libgmp) for
+ their large integer computations.
+
+Package: libhogweed5-dbgsym
+Source: nettle
+Version: 3.5.1+really3.5.1-2~bpo10+1
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Magnus Holmgren <holmgren@debian.org>
+Installed-Size: 234
+Depends: libhogweed5 (= 3.5.1+really3.5.1-2~bpo10+1)
+Multi-Arch: same
+Priority: optional
+Section: debug
+Filename: pool/main/n/nettle/libhogweed5-dbgsym_3.5.1+really3.5.1-2~bpo10+1_amd64.deb
+Size: 198804
+SHA256: 23b809c5296d85c2b5c567e7226c4dc42a072b7fc5f4f7c3edfb232b1adaaeca
+SHA1: 404f66bf68f078d8b5ccaae82a0a063902334c0f
+MD5sum: 5ffe3c390583d65eab09d5db832da159
+Description: debug symbols for libhogweed5
+Build-Ids: 0bf288546e4f38083ea694f76fe4a13c9f2a0bf6
+
+Package: libnettle7
+Source: nettle
+Version: 3.5.1+really3.5.1-2~bpo10+1
+Architecture: amd64
+Maintainer: Magnus Holmgren <holmgren@debian.org>
+Installed-Size: 400
+Depends: libc6 (>= 2.14)
+Multi-Arch: same
+Homepage: http://www.lysator.liu.se/~nisse/nettle/
+Priority: optional
+Section: libs
+Filename: pool/main/n/nettle/libnettle7_3.5.1+really3.5.1-2~bpo10+1_amd64.deb
+Size: 223352
+SHA256: 6d50fd066449ceae0facf0ad8e4c27fcb2e8b7e39ebfae5181809b2d84f5dec2
+SHA1: 2c24f484cb5c1121b2d372683dc3ef407c9b5035
+MD5sum: 722b5f3652ac65132cc980169b0c285b
+Description: low level cryptographic library (symmetric and one-way cryptos)
+ Nettle is a cryptographic library that is designed to fit easily in more or
+ less any context: In crypto toolkits for object-oriented languages (C++,
+ Python, Pike, ...), in applications like LSH or GNUPG, or even in kernel
+ space.
+ .
+ It tries to solve a problem of providing a common set of cryptographic
+ algorithms for higher-level applications by implementing a
+ context-independent set of cryptographic algorithms. In that light, Nettle
+ doesn't do any memory allocation or I/O, it simply provides the
+ cryptographic algorithms for the application to use in any environment and
+ in any way it needs.
+ .
+ This package contains the symmetric and one-way cryptographic
+ algorithms. To avoid having this package depend on libgmp, the
+ asymmetric cryptos reside in a separate library, libhogweed.
+
+Package: libnettle7-dbgsym
+Source: nettle
+Version: 3.5.1+really3.5.1-2~bpo10+1
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Magnus Holmgren <holmgren@debian.org>
+Installed-Size: 265
+Depends: libnettle7 (= 3.5.1+really3.5.1-2~bpo10+1)
+Multi-Arch: same
+Priority: optional
+Section: debug
+Filename: pool/main/n/nettle/libnettle7-dbgsym_3.5.1+really3.5.1-2~bpo10+1_amd64.deb
+Size: 228600
+SHA256: 21e74b7a21a26aafe802dc9770a34fc278cde6f4a9fe9416198d63f2e6236eb7
+SHA1: ef150149e56e46ccba48cc0856e236864276c7ac
+MD5sum: 8b3d2614382edbef2876cf26d12a2f2e
+Description: debug symbols for libnettle7
+Build-Ids: 02284d8aba873ee5efc6ce27847404ed4e1112dd
+
+Package: libp11-kit-dev
+Source: p11-kit
+Version: 0.23.20-1~bpo10+1
+Architecture: amd64
+Maintainer: Debian GnuTLS Maintainers <pkg-gnutls-maint@lists.alioth.debian.org>
+Installed-Size: 705
+Depends: libp11-kit0 (= 0.23.20-1~bpo10+1)
+Multi-Arch: same
+Homepage: https://p11-glue.github.io/p11-glue/p11-kit.html
+Priority: optional
+Section: libdevel
+Filename: pool/main/p/p11-kit/libp11-kit-dev_0.23.20-1~bpo10+1_amd64.deb
+Size: 205580
+SHA256: ba436146ddf1e1ea792ca1ed524488ada458cd6c08917cc23628ef2f9563656e
+SHA1: a06186f8444a468eb3db2e5e4d08335c9d7797ae
+MD5sum: d3489a44ad981f80b43799f369a0e84e
+Description: library for loading and coordinating access to PKCS#11 modules - development
+ The p11-kit library provides a way to load and enumerate Public-Key
+ Cryptography Standard #11 modules, along with a standard configuration
+ setup for installing PKCS#11 modules so that they're discoverable. It
+ also solves problems with coordinating the use of PKCS#11 by different
+ components or libraries living in the same process.
+ .
+ This package contains the documentation and development headers required
+ to build applications using the p11-kit library.
+
+Package: libp11-kit0
+Source: p11-kit
+Version: 0.23.20-1~bpo10+1
+Architecture: amd64
+Maintainer: Debian GnuTLS Maintainers <pkg-gnutls-maint@lists.alioth.debian.org>
+Installed-Size: 1375
+Depends: libc6 (>= 2.26), libffi7 (>= 3.3~20180313)
+Breaks: opencryptoki (<= 3.6.1+dfsg-1)
+Multi-Arch: same
+Homepage: https://p11-glue.github.io/p11-glue/p11-kit.html
+Priority: optional
+Section: libs
+Filename: pool/main/p/p11-kit/libp11-kit0_0.23.20-1~bpo10+1_amd64.deb
+Size: 326704
+SHA256: 3083ee4854bf880165b3735c3b45e174d8abcfdcb68167643e75e3b4ea0bd8ed
+SHA1: 02ceb323eaadf7936d5d10b42e28974b296cac8b
+MD5sum: b012ac3fbf022b4dd718aa1f81a959f2
+Description: library for loading and coordinating access to PKCS#11 modules - runtime
+ The p11-kit library provides a way to load and enumerate Public-Key
+ Cryptography Standard #11 modules, along with a standard configuration
+ setup for installing PKCS#11 modules so that they're discoverable. It
+ also solves problems with coordinating the use of PKCS#11 by different
+ components or libraries living in the same process.
+ .
+ This package contains the shared library required for applications loading
+ and accessing PKCS#11 modules.
+
+Package: libp11-kit0-dbgsym
+Source: p11-kit
+Version: 0.23.20-1~bpo10+1
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Debian GnuTLS Maintainers <pkg-gnutls-maint@lists.alioth.debian.org>
+Installed-Size: 1890
+Depends: libp11-kit0 (= 0.23.20-1~bpo10+1)
+Multi-Arch: same
+Priority: optional
+Section: debug
+Filename: pool/main/p/p11-kit/libp11-kit0-dbgsym_0.23.20-1~bpo10+1_amd64.deb
+Size: 1239716
+SHA256: 994778c54af7c4cb16163db3902e79cb2b3646a59bf634cc269f7ed2fb53c9f7
+SHA1: dfc8fe313087bbbf87b96ccf943e784a46a34ec7
+MD5sum: d6565c18a4af116f3defaf13a9dd816e
+Description: debug symbols for libp11-kit0
+Build-Ids: 94072b4cccb1dbbb6dcc453438c0d5751ece40db
+
+Package: libtasn1-6
+Version: 4.16.0-2~bpo10+1
+Architecture: amd64
+Maintainer: Debian GnuTLS Maintainers <pkg-gnutls-maint@lists.alioth.debian.org>
+Installed-Size: 124
+Depends: libc6 (>= 2.14)
+Multi-Arch: same
+Homepage: https://www.gnu.org/software/libtasn1/
+Priority: optional
+Section: libs
+Filename: pool/main/libt/libtasn1-6/libtasn1-6_4.16.0-2~bpo10+1_amd64.deb
+Size: 55400
+SHA256: 14395397f8897fe61a4b9b79c6d6bbe3e3c03f440874a541293729040e6afaa1
+SHA1: c4834068f0cf4d5cb51ebab9be23fe1b5bc8efa7
+MD5sum: 0c1a970e3851cb33765ea7a27f7913cc
+Description: Manage ASN.1 structures (runtime)
+ Manage ASN1 (Abstract Syntax Notation One) structures.
+ The main features of this library are:
+   * on-line ASN1 structure management that doesn't require any C code
+     file generation.
+   * off-line ASN1 structure management with C code file generation
+     containing an array.
+   * DER (Distinguish Encoding Rules) encoding
+   * no limits for INTEGER and ENUMERATED values
+ .
+ This package contains runtime libraries.
+
+Package: libtasn1-6-dbgsym
+Source: libtasn1-6
+Version: 4.16.0-2~bpo10+1
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Debian GnuTLS Maintainers <pkg-gnutls-maint@lists.alioth.debian.org>
+Installed-Size: 103
+Depends: libtasn1-6 (= 4.16.0-2~bpo10+1)
+Multi-Arch: same
+Priority: optional
+Section: debug
+Filename: pool/main/libt/libtasn1-6/libtasn1-6-dbgsym_4.16.0-2~bpo10+1_amd64.deb
+Size: 87220
+SHA256: 99a43cfad052c58da25c03f209ad3e01655b42c97e796d1a39dacb13e4e8cd72
+SHA1: 69dabf81494d6142dcf3c543e9edca1741081885
+MD5sum: 595376bb7dcee6e808d66e9f497f61e6
+Description: debug symbols for libtasn1-6
+Build-Ids: 3b7d14c6753249e53a4fa23646dc73fac97d81f5
+
+Package: libtasn1-6-dev
+Source: libtasn1-6
+Version: 4.16.0-2~bpo10+1
+Architecture: amd64
+Maintainer: Debian GnuTLS Maintainers <pkg-gnutls-maint@lists.alioth.debian.org>
+Installed-Size: 270
+Depends: libtasn1-6 (= 4.16.0-2~bpo10+1)
+Recommends: libtasn1-doc (= 4.16.0-2~bpo10+1)
+Conflicts: libtasn1-dev
+Provides: libtasn1-dev
+Multi-Arch: same
+Homepage: https://www.gnu.org/software/libtasn1/
+Priority: optional
+Section: libdevel
+Filename: pool/main/libt/libtasn1-6/libtasn1-6-dev_4.16.0-2~bpo10+1_amd64.deb
+Size: 104176
+SHA256: 194590edac8548b2b78556357bfb74842d38a7a8b614f929cb1b2a5b028fbfe7
+SHA1: 2d6d1cd5bd3830f4d8b305fbc10f7511ecb4328d
+MD5sum: c93296b17d66f4e59e1b80cd962e2ccd
+Description: Manage ASN.1 structures (development)
+ Manage ASN1 (Abstract Syntax Notation One) structures.
+ The main features of this library are:
+   * on-line ASN1 structure management that doesn't require any C code
+     file generation.
+   * off-line ASN1 structure management with C code file generation
+     containing an array.
+   * DER (Distinguish Encoding Rules) encoding
+   * no limits for INTEGER and ENUMERATED values
+ .
+ This package contains header files and libraries for static linking.
+
+Package: libtasn1-bin
+Source: libtasn1-6
+Version: 4.16.0-2~bpo10+1
+Architecture: amd64
+Maintainer: Debian GnuTLS Maintainers <pkg-gnutls-maint@lists.alioth.debian.org>
+Installed-Size: 80
+Depends: libc6 (>= 2.17), libtasn1-6 (>= 4.14)
+Breaks: libtasn1-3-bin (<< 3)
+Replaces: libtasn1-3-bin
+Multi-Arch: foreign
+Homepage: https://www.gnu.org/software/libtasn1/
+Priority: optional
+Section: devel
+Filename: pool/main/libt/libtasn1-6/libtasn1-bin_4.16.0-2~bpo10+1_amd64.deb
+Size: 31244
+SHA256: 484a88147565060be724682e7bf4a688718460398821cea75cb1fc44318dd2c0
+SHA1: e65c2aa1e5e6cf4c6d60b369f636073b99d4b614
+MD5sum: bf216d3b483ffd943c839959c5a9ce28
+Description: Manage ASN.1 structures (binaries)
+ Manage ASN1 (Abstract Syntax Notation One) structures.
+ The main features of this library are:
+   * on-line ASN1 structure management that doesn't require any C code
+     file generation.
+   * off-line ASN1 structure management with C code file generation
+     containing an array.
+   * DER (Distinguish Encoding Rules) encoding
+   * no limits for INTEGER and ENUMERATED values
+ .
+ This package contains programs to encode, decode and parse asn1 data
+ structures.
+
+Package: libtasn1-bin-dbgsym
+Source: libtasn1-6
+Version: 4.16.0-2~bpo10+1
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Debian GnuTLS Maintainers <pkg-gnutls-maint@lists.alioth.debian.org>
+Installed-Size: 57
+Depends: libtasn1-bin (= 4.16.0-2~bpo10+1)
+Priority: optional
+Section: debug
+Filename: pool/main/libt/libtasn1-6/libtasn1-bin-dbgsym_4.16.0-2~bpo10+1_amd64.deb
+Size: 23932
+SHA256: 29f3dd3f113c8d45c29f51a2c305b6aa7f2056399764c6603d3c6ac94ae3f8f7
+SHA1: f8028671a1c2a5ea61f7693faef4927a2c44ee04
+MD5sum: 4fa90c463fcfe6a51ee8337990b46873
+Description: debug symbols for libtasn1-bin
+Build-Ids: 1bd3d0abe176167ac7966f724b556d0647b9728f 92788e9f34bbb224106879e8f9b48c60e3c34477 db1983c473bbefa75859c23ffcbc27eb8000e555
+
+Package: libtasn1-doc
+Source: libtasn1-6
+Version: 4.16.0-2~bpo10+1
+Architecture: all
+Maintainer: Debian GnuTLS Maintainers <pkg-gnutls-maint@lists.alioth.debian.org>
+Installed-Size: 397
+Breaks: libtasn1-3-dev (<< 3), libtasn1-6-dev (<< 3.6-2)
+Replaces: libtasn1-3-dev (<< 3), libtasn1-6-dev (<< 3.6-2)
+Homepage: https://www.gnu.org/software/libtasn1/
+Priority: optional
+Section: doc
+Filename: pool/main/libt/libtasn1-6/libtasn1-doc_4.16.0-2~bpo10+1_all.deb
+Size: 320860
+SHA256: c3ec590c8c2a03a8cf3e7e8d020726850942a2047000d1529d30303b25da1643
+SHA1: 8b616c2ffdda7fbd0d755ff1ba0764176840c8c9
+MD5sum: 51f038478526f65307739f2cf1336dfe
+Description: Manage ASN.1 structures (documentation)
+ Manage ASN1 (Abstract Syntax Notation One) structures.
+ The main features of this library are:
+   * on-line ASN1 structure management that doesn't require any C code
+     file generation.
+   * off-line ASN1 structure management with C code file generation
+     containing an array.
+   * DER (Distinguish Encoding Rules) encoding
+   * no limits for INTEGER and ENUMERATED values
+ .
+ This package contains the documentation for developing with libtasn1.
+
+Package: nettle-bin
+Source: nettle
+Version: 3.5.1+really3.5.1-2~bpo10+1
+Architecture: amd64
+Maintainer: Magnus Holmgren <holmgren@debian.org>
+Installed-Size: 114
+Depends: libc6 (>= 2.4), libgmp10, libhogweed5, libnettle7 (= 3.5.1+really3.5.1-2~bpo10+1)
+Suggests: lsh-doc
+Breaks: lsh-utils (<< 2.0.4-dfsg-1)
+Replaces: lsh-utils (<< 2.0.4-dfsg-1)
+Multi-Arch: foreign
+Homepage: http://www.lysator.liu.se/~nisse/nettle/
+Priority: optional
+Section: misc
+Filename: pool/main/n/nettle/nettle-bin_3.5.1+really3.5.1-2~bpo10+1_amd64.deb
+Size: 25208
+SHA256: 7430cd1e8a1f5beed472769467e3e8814479987ada5fc72b90a557a6134a0721
+SHA1: 4f8063b79ad7d29d3ffdf94c0aec2e4aa5a53f55
+MD5sum: 8ced20110552985984329945b094f608
+Description: low level cryptographic library (binary tools)
+ Nettle is a cryptographic library that is designed to fit easily in more or
+ less any context: In crypto toolkits for object-oriented languages (C++,
+ Python, Pike, ...), in applications like LSH or GNUPG, or even in kernel
+ space.
+ .
+ It tries to solve a problem of providing a common set of cryptographic
+ algorithms for higher-level applications by implementing a
+ context-independent set of cryptographic algorithms. In that light, Nettle
+ doesn't do any memory allocation or I/O, it simply provides the
+ cryptographic algorithms for the application to use in any environment and
+ in any way it needs.
+ .
+ This package contains binary utilities that accompany the library:
+ .
+    - nettle-lfib-stream - generates a pseudo-random stream, using the Knuth
+      lfib (non-cryptographic) pseudo-random generator.
+    - sexp-conv - conversion tool for handling the different flavours of sexp
+      syntax.
+    - pkcs1-conv - converts PKCS#1 keys to sexp format.
+    - nettle-hash - command-line tool to compute message digests such as SHA-1.
+
+Package: nettle-bin-dbgsym
+Source: nettle
+Version: 3.5.1+really3.5.1-2~bpo10+1
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Magnus Holmgren <holmgren@debian.org>
+Installed-Size: 217
+Depends: nettle-bin (= 3.5.1+really3.5.1-2~bpo10+1)
+Priority: optional
+Section: debug
+Filename: pool/main/n/nettle/nettle-bin-dbgsym_3.5.1+really3.5.1-2~bpo10+1_amd64.deb
+Size: 170788
+SHA256: d2da306c913ae0fa0c2d88f2f8ee8e47d272d110618d4dfc43c96c9ed77f029f
+SHA1: e1bb6d9e555d1aa484aa755505b96a4d1be54b11
+MD5sum: eebcda9829287c79d3ecf0033215c07f
+Description: debug symbols for nettle-bin
+Build-Ids: 2a7542aec045cda1652413c637f2b54c772b9443 2fb67104cd484647246e489d0c599ea8dd7042ac 4c9669dfbc422f80113b1be0167b4c4ee811b409 aab610bfbe6efded1903b0a89f80487987ca81da c162ab67c1801642bc844002c51aa5cc0d1dabaa
+
+Package: nettle-dev
+Source: nettle
+Version: 3.5.1+really3.5.1-2~bpo10+1
+Architecture: amd64
+Maintainer: Magnus Holmgren <holmgren@debian.org>
+Installed-Size: 2548
+Depends: libnettle7 (= 3.5.1+really3.5.1-2~bpo10+1), libhogweed5 (= 3.5.1+really3.5.1-2~bpo10+1), libgmp-dev, dpkg (>= 1.15.4) | install-info
+Conflicts: libnettle-dev
+Replaces: libnettle-dev
+Multi-Arch: same
+Homepage: http://www.lysator.liu.se/~nisse/nettle/
+Priority: optional
+Section: libdevel
+Filename: pool/main/n/nettle/nettle-dev_3.5.1+really3.5.1-2~bpo10+1_amd64.deb
+Size: 1113280
+SHA256: e376baaa5f9e32bbf1d260fac4cb78919ebbbdad31e54fd0d9e9a9902859f63f
+SHA1: e573c08d5ebe5175dd6ca6ada400940c30b7f933
+MD5sum: f9747da805dfdb3381a05165273c9790
+Description: low level cryptographic library (development files)
+ Nettle is a cryptographic library that is designed to fit easily in more or
+ less any context: In crypto toolkits for object-oriented languages (C++,
+ Python, Pike, ...), in applications like LSH or GNUPG, or even in kernel
+ space.
+ .
+ It tries to solve a problem of providing a common set of cryptographic
+ algorithms for higher-level applications by implementing a
+ context-independent set of cryptographic algorithms. In that light, Nettle
+ doesn't do any memory allocation or I/O, it simply provides the
+ cryptographic algorithms for the application to use in any environment and
+ in any way it needs.
+ .
+ This package contains the development files (C headers and static libraries)
+
+Package: p11-kit
+Version: 0.23.20-1~bpo10+1
+Architecture: amd64
+Maintainer: Debian GnuTLS Maintainers <pkg-gnutls-maint@lists.alioth.debian.org>
+Installed-Size: 954
+Depends: p11-kit-modules (>= 0.23.20-1~bpo10+1), libc6 (>= 2.26), libp11-kit0 (>= 0.23.18.1), libtasn1-6 (>= 4.14)
+Homepage: https://p11-glue.github.io/p11-glue/p11-kit.html
+Priority: optional
+Section: misc
+Filename: pool/main/p/p11-kit/p11-kit_0.23.20-1~bpo10+1_amd64.deb
+Size: 277620
+SHA256: 556f570db94c70904f123b18a197714b9daf43e1d6459cd7fa1db982df06c176
+SHA1: d9aeb70e7b56de72f91c84759d783ed1513a908b
+MD5sum: 8be9841f1faa2521b41ec39e36445721
+Description: p11-glue utilities
+ The p11-kit library provides a way to load and enumerate Public-Key
+ Cryptography Standard #11 modules, along with a standard configuration
+ setup for installing PKCS#11 modules so that they're discoverable. It
+ also solves problems with coordinating the use of PKCS#11 by different
+ components or libraries living in the same process.
+ .
+ This package contains the p11-kit tool for listing PKCS#11 modules.
+
+Package: p11-kit-dbgsym
+Source: p11-kit
+Version: 0.23.20-1~bpo10+1
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Debian GnuTLS Maintainers <pkg-gnutls-maint@lists.alioth.debian.org>
+Installed-Size: 312
+Depends: p11-kit (= 0.23.20-1~bpo10+1)
+Priority: optional
+Section: debug
+Filename: pool/main/p/p11-kit/p11-kit-dbgsym_0.23.20-1~bpo10+1_amd64.deb
+Size: 244752
+SHA256: 79b4770041e4b2c11ee35ab63d1083840722f37f1df741cbfa57fbb9d89b67e0
+SHA1: 906e58f21d643bc8a119ca128fa5038844b788fd
+MD5sum: 4e0f9dfaeb61b8178e660ce14e8aa469
+Description: debug symbols for p11-kit
+Build-Ids: 077bfcf548a3c0896fd6e27be385e98cc871de7c 4a250f0444a41317b95bcf635db34a58bc862355 763d5ab3624678b5d02dcb26680ad0b9194e9a3a df81feaa71df2af6763a47ade3bf042d80b466a0
+
+Package: p11-kit-modules
+Source: p11-kit
+Version: 0.23.20-1~bpo10+1
+Architecture: amd64
+Maintainer: Debian GnuTLS Maintainers <pkg-gnutls-maint@lists.alioth.debian.org>
+Installed-Size: 1406
+Depends: libp11-kit0 (= 0.23.20-1~bpo10+1), libc6 (>= 2.26), libffi7 (>= 3.3~20180313), libtasn1-6 (>= 4.14)
+Breaks: p11-kit (<= 0.20.2-1)
+Replaces: p11-kit (<= 0.20.2-1)
+Multi-Arch: same
+Homepage: https://p11-glue.github.io/p11-glue/p11-kit.html
+Priority: optional
+Section: misc
+Filename: pool/main/p/p11-kit/p11-kit-modules_0.23.20-1~bpo10+1_amd64.deb
+Size: 226904
+SHA256: 9feb2b42c16f624214f293d6c4a94e8391270933516f3f9b2ff0322ca41ef3aa
+SHA1: ae4378e44e013252a6616b29e0b6054dc8ab49b4
+MD5sum: c873b81c81d1002a013cc4847122590d
+Description: p11-glue proxy and trust modules
+ The p11-kit library provides a way to load and enumerate Public-Key
+ Cryptography Standard #11 modules, along with a standard configuration
+ setup for installing PKCS#11 modules so that they're discoverable. It
+ also solves problems with coordinating the use of PKCS#11 by different
+ components or libraries living in the same process.
+ .
+ This package contains the p11-kit proxy module and the system trust
+ policy module.
+
+Package: p11-kit-modules-dbgsym
+Source: p11-kit
+Version: 0.23.20-1~bpo10+1
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Debian GnuTLS Maintainers <pkg-gnutls-maint@lists.alioth.debian.org>
+Installed-Size: 2041
+Depends: p11-kit-modules (= 0.23.20-1~bpo10+1)
+Multi-Arch: same
+Priority: optional
+Section: debug
+Filename: pool/main/p/p11-kit/p11-kit-modules-dbgsym_0.23.20-1~bpo10+1_amd64.deb
+Size: 1365448
+SHA256: 6992374b5212ab0f5adc22b888d77b254ebbb2ee87b9f32899c89b5b48ee162e
+SHA1: 488351782ccec59c68d3aca2306f29d687ee9866
+MD5sum: 64811c969a2ef5320977d5de40622466
+Description: debug symbols for p11-kit-modules
+Build-Ids: 925c197fcd2e0658233c95b5aa37109a240268da c569e12942d8f2fbe18ed057d269b0c56ca48bf5
+
 Package: shorewall-core
 Version: 5.2.4+bpo
 Architecture: all
