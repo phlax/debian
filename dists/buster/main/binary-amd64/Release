@@ -1,0 +1,5 @@
+Component: main
+Origin: phlax.github.io/debian
+Label: phlax.github.io/debian
+Architecture: amd64
+Description: Personal repository
