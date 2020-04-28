@@ -37,6 +37,23 @@ MD5sum: 6edb01025190bf9312ce5ee1c2d1c713
 Description: debug symbols for criu
 Build-Ids: 314dc4b42a5b2d98a50202ccb0e2f37ec1f631b6 78322ef4b148f8e838e3fc7480c646e0e275e4ad 959f883236046769dd85dfd0b5ab4a8228c6a368 dcce4a06dca4d308203a59d6e412fb2d49221a72
 
+Package: docker-cloud
+Version: 0.0.1
+Architecture: all
+Maintainer: "Ryan Northey" <ryan@synca.io>
+Installed-Size: 31
+Depends: git, byobu, emacs-nox, gpg, jq, sudo, locales, docker.io, shorewall, virtualenv, yaml-mode
+Homepage: https://github.com/phlax/docker-cloud
+Priority: optional
+Section: devel
+Filename: pool/main/d/docker-cloud/docker-cloud_0.0.1_all.deb
+Size: 4560
+SHA256: 732c45cacffa5bb7ea143395e5a073bf120f8cc4dabc5c4fd9223995a07deb3b
+SHA1: 0f94ca68e068607f8777a30d3098d5292d7a7c53
+MD5sum: 19b0f205f6db93ce8d55378c5e1367d1
+Description: Docker cloud setup
+ Add dependencies, configuration and setup for docker-cloud servers
+
 Package: docker-triggers
 Version: 0.0.1
 Architecture: all
