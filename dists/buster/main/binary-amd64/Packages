@@ -72,6 +72,23 @@ Description: Docker triggers
  Listen to Docker events and trigger scripts when
  given pattern match the event.
 
+Package: fatc
+Version: 0.0.1
+Architecture: all
+Maintainer: "Ryan Northey" <ryan@synca.io>
+Installed-Size: 64
+Depends: bc, criu, curl, dateutils, docker-ce, docker-triggers, gettext-base, git, iproute2, iputils-ping, jq, moreutils
+Homepage: https://github.com/phlax/fatc
+Priority: optional
+Section: devel
+Filename: pool/main/f/fatc/fatc_0.0.1_all.deb
+Size: 8960
+SHA256: d349d9b3e64e2a4aec965976af50110e56fba8dd48521b5b27f0a4f5125f76c1
+SHA1: dcbddef490b71a86da3e77dcfa5f01a2e254dc7c
+MD5sum: 1710cc0b455c4b2d6029d94c3c82fdc4
+Description: Fat controller elastic Docker orchestration
+ Manage docker daemons and dynamic services
+
 Package: gnutls-bin
 Source: gnutls28
 Version: 3.6.13-2~bpo10+1
