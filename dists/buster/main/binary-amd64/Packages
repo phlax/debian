@@ -73,19 +73,19 @@ Description: Docker triggers
  given pattern match the event.
 
 Package: fatc
-Version: 0.0.33
+Version: 0.0.34
 Architecture: all
 Maintainer: "Ryan Northey" <ryan@synca.io>
-Installed-Size: 69
+Installed-Size: 71
 Depends: bc, criu, curl, dateutils, docker-ce, docker-triggers, gettext-base, git, iproute2, iputils-ping, jq, moreutils, net-tools, python3-venv
 Homepage: https://github.com/phlax/fatc
 Priority: optional
 Section: devel
-Filename: pool/main/f/fatc/fatc_0.0.33_all.deb
-Size: 11452
-SHA256: ac7512ab8e945f977d20599f6461cf3ad61570a0f81e31af34c805189052fdc8
-SHA1: 2f36d6a8a5672b03a7340f9b3807092083bcfffa
-MD5sum: 6c6adead64dcd6d554d16e4e6fefc48f
+Filename: pool/main/f/fatc/fatc_0.0.34_all.deb
+Size: 11568
+SHA256: 54a35ea8f599d16dbb3ab307ec1fa9c86da585b6f790b846c9c133b08ad8afbb
+SHA1: c01dc3b915fee88073fd6c9e35ffe7838d2ac81f
+MD5sum: 6d7635ebfac37fabecb0e15ef517e555
 Description: Fat controller elastic socket-activated proxy and container orchestration
  Manage docker daemons and dynamic services
 
