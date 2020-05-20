@@ -38,7 +38,7 @@ Description: debug symbols for criu
 Build-Ids: 314dc4b42a5b2d98a50202ccb0e2f37ec1f631b6 78322ef4b148f8e838e3fc7480c646e0e275e4ad 959f883236046769dd85dfd0b5ab4a8228c6a368 dcce4a06dca4d308203a59d6e412fb2d49221a72
 
 Package: docker-cloud
-Version: 0.0.13
+Version: 0.0.14
 Architecture: all
 Maintainer: "Ryan Northey" <ryan@synca.io>
 Installed-Size: 29
@@ -46,11 +46,11 @@ Depends: docker-ce, git, gpg, jq, kmod, locales, openssh-server, procps, shorewa
 Homepage: https://github.com/phlax/docker-cloud
 Priority: optional
 Section: devel
-Filename: pool/main/d/docker-cloud/docker-cloud_0.0.13_all.deb
-Size: 4976
-SHA256: 864f4c6bbb5164abcd71fb49b83eb7b8b4387155dca5f335345087b7c4130cb4
-SHA1: f5db2bd50b2dfc5f4ea016651b24c9fbf5a5634e
-MD5sum: f2e91049f8de56362da3b88504d1a250
+Filename: pool/main/d/docker-cloud/docker-cloud_0.0.14_all.deb
+Size: 5044
+SHA256: 5e10957ccd87e26f5595eed9217ebf02fc9937b8e212fd354bcd5fca93387ae6
+SHA1: a9ee835d8e05728bf0b5541a34ea2ae5898c0ee2
+MD5sum: e5adb3c42e36d7202018b107e2c0e54b
 Description: Docker cloud setup
  Add dependencies, configuration and setup for docker-cloud servers
 
