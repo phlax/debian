@@ -1093,19 +1093,19 @@ Description: Shorewall core components
  by itself.
 
 Package: tpls
-Version: 0.0.2
+Version: 0.0.3
 Architecture: all
 Maintainer: "Ryan Northey" <ryan@synca.io>
-Installed-Size: 18
+Installed-Size: 19
 Depends: ca-certificates, gettext-base, git, jq
 Homepage: https://github.com/phlax/tpls
 Priority: optional
 Section: devel
-Filename: pool/main/t/tpls/tpls_0.0.2_all.deb
-Size: 3456
-SHA256: 6b55048aed8012121bea03a97ee3e3072d34ccf0bed03b45bd30376ec1f0e978
-SHA1: 2d663275151a4564bf99ae7ca2fb913a5bebe3a4
-MD5sum: 0198f50a10dca9a27cda238d674b4bdd
+Filename: pool/main/t/tpls/tpls_0.0.3_all.deb
+Size: 3520
+SHA256: 8a6a6c356faaf93ebbb2e53d5407e6234993a1445335b3a60c41db3f47cd9d97
+SHA1: 8e4c6565c00650a0285aa54ee5f170b48fa6cb0f
+MD5sum: 2da309314f3c55dc338b84ff850c078f
 Description: Template mangler
  Pull templates from template registries and apply configurable substitutions
 
