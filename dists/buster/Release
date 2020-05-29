@@ -1,19 +1,19 @@
 Origin: phlax.github.io/debian
 Label: phlax.github.io/debian
 Codename: buster
-Date: Fri, 29 May 2020 12:04:46 UTC
+Date: Fri, 29 May 2020 18:00:32 UTC
 Architectures: amd64
 Components: main
 Description: Personal repository
 MD5Sum:
- 99ee32dc73242c520a5f85e07cf207b5 45349 main/binary-amd64/Packages
- 78c56b2d5a86034fb05531064d8e9cf4 11273 main/binary-amd64/Packages.gz
+ fac6508a35f69bc815ae1d7f69fa5aba 45349 main/binary-amd64/Packages
+ f7a5413125fc1c451e9a4e867a967bad 11275 main/binary-amd64/Packages.gz
  12894b29a84e47d921418ecd79ac93ff 130 main/binary-amd64/Release
 SHA1:
- e67d34f006d8470eeb1afeb2db016bc71bdfb929 45349 main/binary-amd64/Packages
- 39a6f7ab84a19c0590920808934c120321885c52 11273 main/binary-amd64/Packages.gz
+ 973050c5daf444f86eb26fcf60056292a8cd478a 45349 main/binary-amd64/Packages
+ faf01a004e899bbdbefbe51e1f3006e513cbab7d 11275 main/binary-amd64/Packages.gz
  bd2d6601808990828168de94c0429018846a6a8d 130 main/binary-amd64/Release
 SHA256:
- 72f18a8c82a859fc4551e86aecf6fe15e56d3de848262308d60d548b9953cf83 45349 main/binary-amd64/Packages
- 9c326fd4ed857d77b296ed77498c04dc718b918ad0f152164b7fd71300a472e1 11273 main/binary-amd64/Packages.gz
+ 5ff16b9f22b7c144897a87475ee05f3f85fc8537318bdbec568d1ba809aa3d33 45349 main/binary-amd64/Packages
+ 819cb3e429bb11a99e912b9fb40b4fd57f0d86084b3732f6805b311082e3a376 11275 main/binary-amd64/Packages.gz
  405b482091ef4bfa8b11c3148c3f749e8697367704d6c03570a6368892078115 130 main/binary-amd64/Release
