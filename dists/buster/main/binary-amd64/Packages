@@ -226,6 +226,23 @@ MD5sum: 682e2b95a95549a2a321e5092149e776
 Description: debug symbols for guile-gnutls
 Build-Ids: 68383dc9c084d9f9016bb72edbfd908af300a116
 
+Package: hashtree
+Version: 0.0.1
+Architecture: all
+Maintainer: "Ryan Northey" <ryan@synca.io>
+Installed-Size: 16
+Depends: coreutils, findutils
+Homepage: https://github.com/phlax/hashtree
+Priority: optional
+Section: devel
+Filename: pool/main/h/hashtree/hashtree_0.0.1_all.deb
+Size: 2716
+SHA256: edce86827db23c295f1f224c9f1902ca430503ef04ce49c1924eda142caf23bb
+SHA1: 8c819c092383a5d92f86d072c10620401f99b525
+MD5sum: 31fd3e3b674ab74cbf3896b3f4185740
+Description: Hash directories
+ Hash directories, ignoring specified files
+
 Package: libffi-dev
 Source: libffi
 Version: 3.3-4~bpo10+1
