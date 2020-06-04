@@ -227,7 +227,7 @@ Description: debug symbols for guile-gnutls
 Build-Ids: 68383dc9c084d9f9016bb72edbfd908af300a116
 
 Package: hashtree
-Version: 0.0.3
+Version: 0.0.4
 Architecture: all
 Maintainer: "Ryan Northey" <ryan@synca.io>
 Installed-Size: 16
@@ -235,11 +235,11 @@ Depends: coreutils, findutils
 Homepage: https://github.com/phlax/hashtree
 Priority: optional
 Section: devel
-Filename: pool/main/h/hashtree/hashtree_0.0.3_all.deb
-Size: 2844
-SHA256: 4488c50837737247ba6784fd9bc3bab6f7cc37550c565e8a56e6e0fa2c4ac7d6
-SHA1: 8c5f9358799eff872e92b97d9c4440012cf66f63
-MD5sum: f3151de648dac17f6b202b3bbd5b8dc7
+Filename: pool/main/h/hashtree/hashtree_0.0.4_all.deb
+Size: 2892
+SHA256: 195007441567358f0f54b9f3714656ee5c11da3c7baad9878ca5b989c8cdd1bf
+SHA1: 3b2c26458071371a909e81a01cf6424689d58c39
+MD5sum: e4336385ab718e29c11c4995cff714ed
 Description: Hash directories
  Hash directories, ignoring specified files
 
