@@ -247,14 +247,14 @@ Package: kvdo
 Version: 6.2.3-0
 Architecture: all
 Maintainer: Ryan Northey <ryan@synca.io>
-Installed-Size: 29899
+Installed-Size: 29900
 Priority: optional
 Section: admin
 Filename: pool/main/k/kvdo/kvdo_6.2.3-0_all.deb
-Size: 4704968
-SHA256: 5919da95d696c5519d5fda45e7b7823d4ea00f8c3e0e208cfa0accde04a52b7a
-SHA1: 2d06d64967e553a984ccf857fdafd7ff4f27124b
-MD5sum: 1e726dbce8bfb0a032ffcfead44070b1
+Size: 4705008
+SHA256: dcd8380d955c2f2260b36ef2bdab8dc86895158d3fbcdf25161eaa537a46057f
+SHA1: 462fa812ddace906b0ffda1ed4d844df592b60b6
+MD5sum: 41757e6c7095c9110d1ea8ab3dc7547d
 Description: VDO deduplication/compression kernel driver
 
 Package: libffi-dev
