@@ -244,17 +244,17 @@ Description: Hash directories
  Hash directories, ignoring specified files
 
 Package: kvdo
-Version: 6.2.3-0
+Version: 6.2.3-1
 Architecture: all
 Maintainer: Ryan Northey <ryan@synca.io>
 Installed-Size: 29900
 Priority: optional
 Section: admin
-Filename: pool/main/k/kvdo/kvdo_6.2.3-0_all.deb
-Size: 4705008
-SHA256: dcd8380d955c2f2260b36ef2bdab8dc86895158d3fbcdf25161eaa537a46057f
-SHA1: 462fa812ddace906b0ffda1ed4d844df592b60b6
-MD5sum: 41757e6c7095c9110d1ea8ab3dc7547d
+Filename: pool/main/k/kvdo/kvdo_6.2.3-1_all.deb
+Size: 4699604
+SHA256: 6b7573817b901eaf8158f49eaeffcc8048804fed682cab74cbc9c94f11918ccb
+SHA1: 6cc619cc6ab5ffb6d6c2dce2d1cbba8d3e5b3494
+MD5sum: b6cd000896a94ddd73206a49d961fb52
 Description: VDO deduplication/compression kernel driver
 
 Package: libffi-dev
