@@ -72,6 +72,27 @@ Description: Docker triggers
  Listen to Docker events and trigger scripts when
  given pattern match the event.
 
+Package: ebtables
+Version: 2.0.11-4
+Architecture: amd64
+Maintainer: Debian Netfilter Packaging Team <pkg-netfilter-team@lists.alioth.debian.org>
+Installed-Size: 264
+Depends: netbase (>= 6.0), libc6 (>= 2.14)
+Recommends: iptables, kmod
+Multi-Arch: foreign
+Homepage: https://netfilter.org/
+Priority: optional
+Section: net
+Filename: pool/main/e/ebtables/ebtables_2.0.11-4_amd64.deb
+Size: 85960
+SHA256: 39f1d50a6043a4a4325fffaf8802081b457467ecbb7def810a72f1fd6de081d4
+SHA1: 0ca29d83a883302c62be7daee5e8641daf1d77b7
+MD5sum: 7dea56f482ca6554713ebd0c1777e257
+Description: Ethernet bridge frame table administration
+ Ebtables is used to set up, maintain, and inspect the tables of
+ Ethernet frame rules in the Linux kernel. It is analogous to iptables,
+ but operates at the MAC layer rather than the IP layer.
+
 Package: fatc
 Version: 0.0.52
 Architecture: all
